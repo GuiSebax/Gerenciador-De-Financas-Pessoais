@@ -74,10 +74,10 @@ dashboard interativo.
 
 **1-** Clonar o repositório
 
-`
+``
 git clone https://github.com/GuiSebax/Gerenciador-De-Financas-Pessoais.git
 cd Gerenciador-De-Financas-Pessoais/backend
-`
+``
 
 **2-** Instale as dependências
 
@@ -85,7 +85,8 @@ cd Gerenciador-De-Financas-Pessoais/backend
 
 **3-** Configuraas variáveis de ambiente no arquivo .env:
 
-`PORT=3000
+``
+PORT=3000
 JWT_SECRET=sua_chave_secreta
 `
 
@@ -97,7 +98,7 @@ JWT_SECRET=sua_chave_secreta
 
 **1-** Navegue para o diretório do frontend:
 
-`
+``
 cd ../frontend
 cd projeto
 `
