@@ -76,6 +76,7 @@ dashboard interativo.
 
 ``
 git clone https://github.com/GuiSebax/Gerenciador-De-Financas-Pessoais.git
+
 cd Gerenciador-De-Financas-Pessoais/backend
 ``
 
@@ -87,8 +88,9 @@ cd Gerenciador-De-Financas-Pessoais/backend
 
 ``
 PORT=3000
+
 JWT_SECRET=sua_chave_secreta
-`
+``
 
 **4-** Inicia o Servidor:
 
@@ -100,8 +102,9 @@ JWT_SECRET=sua_chave_secreta
 
 ``
 cd ../frontend
+
 cd projeto
-`
+``
 
 **2-** Instale as dependências:
 
