@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  font-weight: bold;
+}
+.nav-item a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-item a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Posição da linha */
+  left: 0;
+  width: 0;
+  height: 2px; /* Espessura da linha */
+  background-color: currentColor; /* Cor da linha igual ao texto */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
+}
