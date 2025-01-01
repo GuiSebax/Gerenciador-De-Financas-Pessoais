@@ -8,9 +8,9 @@ const transactions = [
 
 const TransactionSummary = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center p-4">
       <h2 className="text-xl font-bold mb-4 text-center">Resumo de Transações</h2>
-      <ul>
+      <ul className="w-full max-w-md">
         {transactions.map((transaction, index) => (
           <li
             key={index}

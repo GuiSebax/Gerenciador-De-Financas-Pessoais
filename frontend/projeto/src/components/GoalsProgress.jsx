@@ -8,12 +8,12 @@ const goals = [
 
 const GoalsProgress = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center p-4">
       <h2 className="text-xl font-bold mb-4 text-center">Progresso de Metas</h2>
-      <ul>
+      <ul className="w-full max-w-md">
         {goals.map((goal, index) => (
           <li key={index} className="mb-4">
-            <span className="block font-semibold">{goal.title}</span>
+            <span className="block font-semibold mb-1">{goal.title}</span>
             <div className="w-full bg-gray-200 rounded-full h-4">
               <div
                 className="bg-green-500 h-4 rounded-full"
