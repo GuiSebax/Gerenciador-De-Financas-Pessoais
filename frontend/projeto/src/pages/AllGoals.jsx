@@ -27,10 +27,11 @@ const AllGoals = () => {
     }, [goals, user]);
 
     return (
-        <div className="flex">
-            <div className="w-full p-4">
+        <div className="flex flex-col items-center p-4">
+            <div className="w-full max-w-4xl">
                 <h1 className="text-2xl font-bold mb-4 text-center text-light-green-700">Todas as Metas</h1>
                 {loading && <div>Carregando...</div>}
+                {error && <div className="text-red-600 mb-4 text-center font-bold">Erro ao carregar metas: {error.message}</div>}
                 <div className="overflow-x-auto">
                     <table className="table-auto w-full border-collapse border border-light-green-500">
                         <thead>
@@ -98,7 +99,7 @@ const AllGoals = () => {
             {/* Modal de confirmação */}
             {modalOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                    <div className="bg-white rounded-lg p-6 w-1/3">
+                    <div className="bg-white rounded-lg p-6 w-11/12 md:w-1/3">
                         <h2 className="text-lg font-semibold mb-4">Confirmar Exclusão</h2>
                         <p>Tem certeza que deseja excluir a meta?</p>
                         <div className="mt-4 flex justify-end gap-4">

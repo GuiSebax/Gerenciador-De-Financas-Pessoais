@@ -34,8 +34,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-light-green-50">
-      <div className="bg-white rounded-lg shadow-lg p-6 w-96">
+    <div className="flex items-center justify-center min-h-screen bg-light-green-50 p-4">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
         <h1 className="text-2xl font-bold text-center text-light-green-700">Login</h1>
         
         {successMessage && <div className="text-green-600 mb-4 text-center font-bold">{successMessage}</div>}

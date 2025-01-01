@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Profile = () => {
   const { getAllUsers, users, error, loading, deleteUser } = useUser()
-  const { auth, logout} = useAuthContext()
+  const { auth, logout } = useAuthContext()
   const { user } = auth
 
   const [usuarioFiltrado, setUsuarioFiltrado] = useState(null)
@@ -43,7 +43,7 @@ const Profile = () => {
   }
 
   const handleDeleteAccount = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (window.confirm('Tem certeza que deseja deletar sua conta?')) {
       await deleteUser(usuarioFiltrado.id)
       navigate('/login')
@@ -52,9 +52,7 @@ const Profile = () => {
       localStorage.removeItem('userPhoto')
       // Precisa deslogar
       logout()
-
     }
-
   }
 
   const handleEditProfile = () => {
@@ -62,7 +60,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen p-4">
       <div className="w-full max-w-4xl p-6 bg-white shadow-md rounded-lg mb-5">
         <h1 className="text-3xl font-bold mb-6 text-light-green-700 text-center">
           Meu Perfil
@@ -119,19 +117,19 @@ const Profile = () => {
                   {usuarioFiltrado.email}
                 </span>
               </p>
-              <p className="text-lg font-semibold text-black mt-2">
+              {/*<p className="text-lg font-semibold text-black mt-2">
                 Senha:
                 <span className="ml-2 font-normal text-gray-600">
                   {usuarioFiltrado.password}
                 </span>
-              </p>
+              </p>*/}
             </div>
           </div>
         ) : (
           <p>Carregando informações do usuário...</p>
         )}
 
-        <div className="mt-8 grid grid-cols-2 gap-4">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
           <button
             onClick={() => navigate('/transactions/all')}
             className="py-2 px-4 bg-light-green-500 hover:bg-light-green-600 text-white font-semibold rounded-md transition duration-200"

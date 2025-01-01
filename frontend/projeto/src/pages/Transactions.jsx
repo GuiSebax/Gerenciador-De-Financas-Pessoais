@@ -54,8 +54,8 @@ const Transactions = () => {
   }
 
   return (
-    <div className="flex">
-      <div className="w-1/2 p-4">
+    <div className="flex flex-col md:flex-row">
+      <div className="w-full md:w-1/2 p-4">
         <h1 className="text-2xl font-bold mb-4 text-light-green-700">Minhas Transações</h1>
         {loading && <div>Carregando...</div>}
         <div className="overflow-x-auto">
@@ -84,18 +84,18 @@ const Transactions = () => {
         </div>
 
         <button
-              onClick={() => IrparaTodas()}
-              className={`w-full mt-4 py-2 px-4 ${loading ? 'bg-gray-400' : 'bg-light-green-500 hover:bg-light-green-600'} text-white font-semibold rounded-md transition duration-200`}
-              disabled={loading}
-            >
-              {loading ? 'Carregando...' : 'Ver Minhas Transações'}
-            </button>
+          onClick={() => IrparaTodas()}
+          className={`w-full mt-4 py-2 px-4 ${loading ? 'bg-gray-400' : 'bg-light-green-500 hover:bg-light-green-600'} text-white font-semibold rounded-md transition duration-200`}
+          disabled={loading}
+        >
+          {loading ? 'Carregando...' : 'Ver Minhas Transações'}
+        </button>
       </div>
 
-      <div className="border-l-4 border-light-green-500 mx-4 h-50 mt-4 mb-4"></div>
+      <div className="border-l-4 border-light-green-500 mx-4 h-50 mt-4 mb-4 hidden md:block"></div>
 
-      <div className="w-1/2 p-4 flex items-center justify-center">
-        <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg ">
+      <div className="w-full md:w-1/2 p-4 flex items-center justify-center">
+        <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
           <h1 className="text-2xl font-bold text-center text-light-green-700">Cadastrar Transação</h1>
           {successMessage && <div className="text-green-600 mb-4 text-center font-bold">{successMessage}</div>}
           {error && <div className="text-red-600 mb-4 text-center font-bold">{error}</div>}
@@ -109,8 +109,6 @@ const Transactions = () => {
                 value={userId}
                 readOnly
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-light-green-500 focus:border-light-green-500"
-                required
-                setUserId={(e) => setUserId(e.target.value)}
               />
             </div>
             <div>
@@ -169,7 +167,6 @@ const Transactions = () => {
                 onChange={(e) => setDate(e.target.value)}
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-light-green-500 focus:border-light-green-500"
                 required
-
               />
             </div>
             <button

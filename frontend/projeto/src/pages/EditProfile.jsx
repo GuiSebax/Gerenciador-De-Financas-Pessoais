@@ -59,7 +59,7 @@ const EditProfile = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center min-h-screen p-4">
       <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
         <h1 className="text-2xl font-bold text-center text-light-green-700">Editar Usuário</h1>
         {successMessage && <div className="text-green-600 mb-4 text-center font-bold">{successMessage}</div>}

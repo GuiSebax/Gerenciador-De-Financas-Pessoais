@@ -48,8 +48,8 @@ const Goals = () => {
   }  
 
   return (
-    <div className="flex">
-      <div className="w-1/2 p-4">
+    <div className="flex flex-col md:flex-row">
+      <div className="w-full md:w-1/2 p-4">
         <h1 className="text-2xl font-bold mb-4 text-light-green-700">Minhas Metas</h1>
         {loading && <div>Carregando...</div>}
         <div className="overflow-x-auto">
@@ -72,17 +72,17 @@ const Goals = () => {
         </div>
 
         <button
-              onClick={() => IrparaTodas()}
-              className={`w-full mt-4 py-2 px-4 ${loading ? 'bg-gray-400' : 'bg-light-green-500 hover:bg-light-green-600'} text-white font-semibold rounded-md transition duration-200`}
-              disabled={loading}
-            >
-              {loading ? 'Carregando...' : 'Ver Minhas Metas'}
-            </button>
+          onClick={() => IrparaTodas()}
+          className={`w-full mt-4 py-2 px-4 ${loading ? 'bg-gray-400' : 'bg-light-green-500 hover:bg-light-green-600'} text-white font-semibold rounded-md transition duration-200`}
+          disabled={loading}
+        >
+          {loading ? 'Carregando...' : 'Ver Minhas Metas'}
+        </button>
       </div>
 
-      <div className="border-l-4 border-light-green-500 mx-4 h-screen mt-4 mb-4"></div>
+      <div className="border-l-4 border-light-green-500 mx-4 h-screen mt-4 mb-4 hidden md:block"></div>
 
-      <div className="w-1/2 p-4 flex justify-center">
+      <div className="w-full md:w-1/2 p-4 flex justify-center">
         <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg h-2/3 mt-4">
           <h1 className="text-2xl font-bold text-center text-light-green-700">Cadastrar Meta</h1>
           {successMessage && <div className="text-green-600 mb-4 text-center font-bold">{successMessage}</div>}
